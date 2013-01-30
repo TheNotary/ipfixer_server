@@ -1,0 +1,28 @@
+==Overview
+
+This is the ipfixer_server.  It's stand alone right now, just pull it down from github.  
+
+I think I'd like to set up a new one as a 'sinatra app' that's embedded in a gem and accessible/ installable from the command line.  
+
+==How this app was made 90% on the command line
+
+The steps I took to generate this rails 'app' were:
+
+$  gem install rails v=3.2.11
+$  rails new ipfixer_server
+$  cd ipfixer_server
+$  rails g scaffold ipfixes host:uniq ip
+
+$  rake db:create
+$  rake db:migrate
+
+$  rails s  # start the server!  
+
+
+After that I needed to edit ipfixes_controller.rb, so that it would accept a json that contained not only 'host' and 'ip', but also 'security_token' which is an optional parameter of the command line app. I also wanted to ensure that it created new ipfixes if the host didn't exist yet, but if that host did exist in the database, it would essentially switch over to editing that ipfix instead.  
+
+
+
+
+
+
