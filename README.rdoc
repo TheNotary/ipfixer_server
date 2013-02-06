@@ -9,12 +9,19 @@ I think I'd like to set up a new one as a 'sinatra app' that's embedded in a gem
 The steps I took to generate this rails 'app' were:
 
 $  gem install rails v=3.2.11
+
 $  rails new ipfixer_server
+
 $  cd ipfixer_server
+
 $  rails g scaffold ipfixes host:uniq ip
 
+
+
 $  rake db:create
+
 $  rake db:migrate
+
 
 $  rails s  # start the server!  
 
