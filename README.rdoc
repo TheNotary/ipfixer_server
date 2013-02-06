@@ -5,8 +5,9 @@ This is the ipfixer_server.  It's stand alone right now, just pull it down from 
 I think I'd like to set up a new one as a 'sinatra app' that's embedded in a gem and accessible/ installable from the command line.  
 
 ==How this app was made 90% on the command line with rails 3.2
+You need ruby 1.9.x and rails 3.2.x installed for this to work.
 
-The steps I took to generate this rails 'app' were:
+=The steps I took to generate this rails 'app' were:
 
 $  gem install rails v=3.2.11
 
